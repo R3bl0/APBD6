@@ -1,6 +1,6 @@
 ﻿namespace Warehouse.Models
 {
-    public class WarehouseProduct
+    public class ProductWarehouse
     {
         public int IdProductWarehouse { get; set; }
         public int IdWarehouse{ get; set; }

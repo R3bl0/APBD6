@@ -9,7 +9,7 @@ namespace Warehouse.Services
     public interface IDbService
     {
         Task<List<WarehouseProductDTO>> GetWarehouseProducts();
-        Task<String> CreateWarehouseProduct();
+        Task<string> CreateProductWarehouse();
     }
     
     public class DbService(IConfiguration configuration):IDbService
@@ -44,9 +44,10 @@ namespace Warehouse.Services
             return response;
         }
 
-        public Task<string> CreateWarehouseProduct()
+        public async Task<string> CreateProductWarehouse()
         {
-            throw new NotImplementedException();
+            
+            return "git git";
         }
     }
 }
