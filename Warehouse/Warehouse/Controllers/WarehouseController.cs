@@ -20,7 +20,12 @@ namespace Warehouse.Controllers
         public async Task<IActionResult> GetProductsWarehouse()
         {
             return Ok(await _dbService.GetWarehouseProducts());
-        } 
-        
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateProductWarehouse(CreateProductWarehouseRequest request)
+        {
+            return Ok(await _dbService.CreateProductWarehouse(request));
+        }
     }
 }
