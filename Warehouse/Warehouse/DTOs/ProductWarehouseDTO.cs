@@ -17,9 +17,9 @@ namespace Warehouse.DTOs
         [Required] DateTime CreatedAt
     );
 
-    public record CreateProductWarehouseResponse(int IdProductWarehouse, int IdWarehouse, int IdProduct, int IdOrder, int Amount, double Price, DateTime CreatedAt)
+    public record CreateProductWarehouseResponse(int IdProductWarehouse, int IdWarehouse, int IdProduct, int IdOrder, int Amount, Decimal Price, DateTime CreatedAt)
     {
-        public CreateProductWarehouseResponse(int IdProductWarehouse, int IdOrder, double Price, CreateProductWarehouseRequest request):this(IdProductWarehouse, 
+        public CreateProductWarehouseResponse(int IdProductWarehouse, int IdOrder, Decimal Price, CreateProductWarehouseRequest request):this(IdProductWarehouse, 
             request.IdWarehouse, request.IdProduct, IdOrder, request.Amount, Price, request.CreatedAt) {}
     };
 }
